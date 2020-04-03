@@ -1,0 +1,67 @@
+.article-box{
+    background: #333 ;
+    color: white;
+    padding: 15px;
+}
+
+.article-box p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#images-array{
+    display: inline-flex;
+}
+
+
+.frame-pictures{
+    padding: 15px;
+    width: 100%;
+   
+}
+
+.frame-pictures img{
+    width: 100%;
+    height: 80%;
+}
+
+.frame-pictures p{
+    padding: 5%;
+    color: #333;
+    text-align: center;
+    background:whitesmoke;
+    margin-top: -5px;
+
+}
+
+
+.text-block h2{
+    font-size: 50px;
+    text-align: center;
+    color :white;
+}
+.text-block{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 100%;
+   
+}
+
+body  {  
+    /*background-image: url("content/cow.jpg");*/
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* bottom, image */
+    url("content/cow.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
