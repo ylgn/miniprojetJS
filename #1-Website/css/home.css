@@ -1,14 +1,3 @@
-.article-box{
-    background: #333 ;
-    color: white;
-    padding: 15px;
-}
-
-.article-box p{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 #images-array{
     display: inline-flex;
 }
@@ -34,21 +23,6 @@
 
 }
 
-
-.text-block h2{
-    font-size: 50px;
-    text-align: center;
-    color :white;
-}
-.text-block{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
-    height: 100%;
-   
-}
-
 body  {  
     /*background-image: url("content/cow.jpg");*/
     background:
@@ -58,7 +32,7 @@ body  {
       rgba(0, 0, 0, 0.3)
     ),
     /* bottom, image */
-    url("content/cow.jpg");
+    url("../content/cow.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

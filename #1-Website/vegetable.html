@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Farm Shop - Légumes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/vegetable.css">
+  <link rel="stylesheet" href="css/products.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="management.html">Gestion de la ferme</a></li>
+    <li class="dropdown">
+      <a class="dropbtn">Produits</a>
+      <div class="dropdown-content">
+        <a href="fruit.html">Fruits</a>
+        <a href="vegetable.html">Légumes</a>
+        <a href="other.html">Autres produits</a>
+      </div>
+    </li>
+    <h1>FarmShop.com</h1>
+    </ul>
+  </ul>
+  </nav>
+  <div class="text-block">
+    <h2>Nos Légumes 🥕</h2>
+    <div class="article-box">
+        <p>Ci-dessous tous nos légumes : </p>
+        <table>
+          <tr>
+            <th>Code Produit :</th>
+            <th>Nom du Produit :</th>
+            <th>Quantité :</th>
+            <th>Prix à l'unité :</th>
+            <th>Origine :</th>
+          </tr>
+          <script>displayTabByType("vegetable");</script>
+        </table>
+        
+    </div>
+</body>
+</html>

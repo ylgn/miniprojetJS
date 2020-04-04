@@ -73,3 +73,29 @@ ul {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+
+  .article-box{
+    background: #333 ;
+    color: white;
+    padding: 15px;
+}
+
+.article-box p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.text-block h2{
+    font-size: 50px;
+    text-align: center;
+    color :white;
+}
+.text-block{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 100%;
+   
+}

@@ -1,0 +1,15 @@
+body  {  
+    /*background-image: url("content/cow.jpg");*/
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* bottom, image */
+    url("../content/salad.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
