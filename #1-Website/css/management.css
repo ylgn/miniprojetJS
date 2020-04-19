@@ -1,0 +1,19 @@
+body  {  
+    /*background-image: url("content/cow.jpg");*/
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("../content/straw.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+p{
+    display: inline-flex;
+}

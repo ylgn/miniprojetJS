@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Farm Shop - ACCUEIL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/management.css">
+  <link rel="stylesheet" href="css/products.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="management.html">Gestion des stocks</a></li>
+      <li class="dropdown">
+        <a class="dropbtn">Produits</a>
+        <div class="dropdown-content">
+          <a href="fruit.html">Fruits</a>
+          <a href="vegetable.html">Légumes</a>
+          <a href="other.html">Autres produits</a>
+        </div>
+      </li>
+      <h1>FarmShop.com</h1>
+      </ul>
+    </ul>
+    </nav>
+  <div class="text-block">
+    <h2>Gestion des stocks</h2>
+    <div class="article-box">
+      <div class="action-box">
+        <h3>Ajouter un produit</h3>
+        <form name="addProduct">
+          <p>
+            <label for="description">Nom du produit </label> :
+            <input type="text" name="description" id="description" required>
+          </p>
+          <p>
+            <label for="quantity">Quantité </label> :
+            <input type="text" name="quantity" id="quantity" required>
+          </p>
+          <p>
+            <label for="price">Prix à l'unité </label> :
+            <input type="text" name="price" id="price" required>
+          </p>
+          <p>
+            <label for="price">Origine </label> :
+            <input type="text" name="region" id="region" required>
+          </p>
+          <p>Quel est le type de produit ?:</p>
+            <input type="radio" id="typeProduct" name="typeProduct" value="fruit" checked>
+            <label for="huey">Fruit</label>
+            <input type="radio" id="typeProduct" name="typeProduct" value="vegetable">
+            <label for="dewey">Légume</label>
+            <input type="radio" id="typeProduct" name="typeProduct" value="diver">
+            <label for="louie">Autre</label>
+            <br>
+            <input type="submit" onClick="addFormProduct();" value="Ajouter"/>
+        </form>
+        <script>
+          function addFormProduct(){
+            var tp = document.getElementsByName("typeProduct");
+            var d = document.getElementsByName("description");
+            var q = document.getElementsByName("quantity");
+            var p = document.getElementsByName("price");
+            var r = document.getElementsByName("region");
+            addProduct(tp,d,q,p,r);
+            return false;
+          }
+        </script>
+        </div>
+      <div class="action-box">
+        <h3>Supprimer un produit</h3>
+        <form name="deleteProduct">
+          <p>
+            <label for="description">No du produit </label> :
+            <input type="text" name="noproduct" id="noproduct" required>
+          </p>
+            <br>
+            <input type="submit" onClick="delteFormProduct();" value="Supprimer"/>
+        </form>
+        <script>
+          function delteFormProduct(){
+            var noproduct = document.getElementsByName("noproduct");
+            deleteProduct(noproduct);
+            return false;
+          }
+        </script>
+      </div>
+      <div class="action-box">
+        <h3>Modifier un produit</h3>
+        <form name="modifyProduct">
+          <p>
+            <label for="description">No du produit </label> :
+            <input type="text" name="noproduct" id="noproduct" required>
+          </p>
+          <p>
+            <label for="description">Nom du produit </label> :
+            <input type="text" name="description" id="description" required>
+          </p>
+          <p>
+            <label for="quantity">Quantité </label> :
+            <input type="text" name="quantity" id="quantity" required>
+          </p>
+          <p>
+            <label for="price">Prix à l'unité </label> :
+            <input type="text" name="price" id="price" required>
+          </p>
+          <p>
+            <label for="price">Origine </label> :
+            <input type="text" name="region" id="region" required>
+          </p>
+            <input type="submit" onClick="modifyFormProduct();" value="Modifier"/>
+        </form>
+         <script>
+          function modifyFormProduct(){
+            var noproduct = document.getElementsByName("noproduct");
+            var d = document.getElementsByName("description");
+            var q = document.getElementsByName("quantity");
+            var p = document.getElementsByName("price");
+            var r = document.getElementsByName("region");
+            modifyProduct(noproduct,d,q,p,r);
+            return false;
+          }
+        </script>
+      </div>
+      <div class="action-box">
+        <h3>Voir l'ensemble des produits</h3>
+        <table>
+          <caption>Ci-dessous tous nos produits : </caption>
+          <div class="description">
+          <tr>
+            <th>Photographie du produit</th>
+            <th>Code Produit</th>
+            <th>Nom du Produit</th>
+            <th>Quantité</th>
+            <th>Prix à l'unité</th>
+            <th>Origine</th>
+          </tr>
+          <script>displayTabByAll();</script>
+        </div>
+        </table>
+      </div>
+      <div class="action-box">
+        <h3>Produits à recommander</h3>
+        <table>
+          <caption>Ci-dessous nos produits à recommander : </caption>
+          <div class="description">
+          <tr>
+            <th>Photographie du produit</th>
+            <th>Code Produit</th>
+            <th>Nom du Produit</th>
+            <th>Quantité</th>
+            <th>Prix à l'unité</th>
+            <th>Origine</th>
+          </tr>
+          <script>displayTabByQuantityZero();</script>
+        </div>
+        </table>
+      </div>
+    </div>
+</body>
+</html>
