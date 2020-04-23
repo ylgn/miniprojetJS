@@ -86,7 +86,7 @@ var numProd = 2;
         if (typeProduct == "fruit") {
             Products.push(new Fruit(numProd++,decription,quantity,price,region));
         }
-        if (typeProduct == "vegetable") {
+        else if (typeProduct == "vegetable") {
             Products.push(new Vegetable(numProd++,decription,quantity,price,region));
         } else {
             Products.push(new DiverProduct(numProd++,decription,quantity,price,region));

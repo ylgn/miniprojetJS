@@ -49,24 +49,24 @@
             <input type="text" name="region" id="region" required>
           </p>
           <p>Quel est le type de produit ?:</p>
-            <input type="radio" id="typeProduct" name="typeProduct" value="fruit" checked>
-            <label for="huey">Fruit</label>
-            <input type="radio" id="typeProduct" name="typeProduct" value="vegetable">
-            <label for="dewey">Légume</label>
-            <input type="radio" id="typeProduct" name="typeProduct" value="diver">
-            <label for="louie">Autre</label>
+            <input type="radio"  id="typeProduct" value="fruit" checked>
+            <label for="fruit">Fruit</label>
+            <input type="radio"  id="typeProduct" value="vegetable">
+            <label for="vegetable">Légume</label>
+            <input type="radio"  id="typeProduct" value="diver">
+            <label for="diver">Autre</label>
             <br>
-            <input type="submit" onClick="addFormProduct();" value="Ajouter"/>
+            <input type="button" onClick="addFormProduct();" value="Ajouter"/>
         </form>
         <script>
           function addFormProduct(){
-            var tp = document.getElementsByName("typeProduct");
-            var d = document.getElementsByName("description");
-            var q = document.getElementsByName("quantity");
-            var p = document.getElementsByName("price");
-            var r = document.getElementsByName("region");
+            var tp = document.getElementById("typeProduct").value;
+            var d = document.getElementById("description").value;
+            var q = document.getElementById("quantity").value;
+            var p = document.getElementById("price").value;
+            var r = document.getElementById("region").value;
             addProduct(tp,d,q,p,r);
-            return false;
+            //return false;
           }
         </script>
         </div>
@@ -75,14 +75,15 @@
         <form name="deleteProduct">
           <p>
             <label for="description">No du produit </label> :
-            <input type="text" name="noproduct" id="noproduct" required>
+            <input type="text" id="noproduct" required>
           </p>
             <br>
-            <input type="submit" onClick="delteFormProduct();" value="Supprimer"/>
+            <input type="button" onClick="delteFormProduct();" value="Supprimer"/>
         </form>
         <script>
           function delteFormProduct(){
-            var noproduct = document.getElementsByName("noproduct");
+            var noproduct = document.getElementById("noproduct").value;
+            alert(noproduct);
             deleteProduct(noproduct);
             return false;
           }
@@ -111,15 +112,15 @@
             <label for="price">Origine </label> :
             <input type="text" name="region" id="region" required>
           </p>
-            <input type="submit" onClick="modifyFormProduct();" value="Modifier"/>
+            <input type="button" onClick="modifyFormProduct();" value="Modifier"/>
         </form>
          <script>
           function modifyFormProduct(){
-            var noproduct = document.getElementsByName("noproduct");
-            var d = document.getElementsByName("description");
-            var q = document.getElementsByName("quantity");
-            var p = document.getElementsByName("price");
-            var r = document.getElementsByName("region");
+            var noproduct = document.getElementById("noproduct").value;
+            var d = document.getElementById("description").value;
+            var q = document.getElementById("quantity").value;
+            var p = document.getElementById("price").value;
+            var r = document.getElementById("region").value;
             modifyProduct(noproduct,d,q,p,r);
             return false;
           }
